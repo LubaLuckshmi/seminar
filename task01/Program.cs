@@ -6,14 +6,16 @@
 // a = 9, b = -3 -> да
 // a = -3, b = 9 -> нет 
 
-int number =
-
-if(number > 10 && number < 100)
+Console.WriteLine("Введите первое число: ");
+int firstNumber = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите второе число: ");
+int secondNumber = Convert.ToInt32(Console.ReadLine());
+int square = secondNumber * secondNumber;
+if(firstNumber == square)
 {
-
-
+Console.WriteLine("Первое число является квадратом второго");
 }
-else if(number == 0)
+else 
 {
-
+Console.WriteLine("Первое число НЕ является квадратом второго");
 }

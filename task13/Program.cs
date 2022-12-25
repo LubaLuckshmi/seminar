@@ -5,7 +5,17 @@
 
 Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int thirdDigit = number %10;
+int num = ThirdDigit(number);
+int result = num % 10;
 
-Console.WriteLine(number >= 100 ?
- $"Третья цифра в числе {number} равна {thirdDigit}" : "Третьей цифры нет");
+Console.WriteLine(num >= 100 && num < 999 ?
+ $"Третья цифра в числе {number} равна {result}" : "Третьей цифры нет");
+
+int ThirdDigit(int number)
+{
+    while (number > 999)
+    {
+        number = number / 10;
+    }
+    return number;
+}

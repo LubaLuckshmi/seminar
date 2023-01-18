@@ -11,8 +11,8 @@ Console.WriteLine($"Количество цифр в числе {number} = {numb
 
 int NumberOfNumbers(int digit)
 {
-    int count = 1;
-    while(digit >= 10)
+    int count = 0;
+    while(digit != 0)
     {
         digit = digit/10;
         count++;

@@ -25,16 +25,16 @@ void PrintArray(int[] arr)
     Console.WriteLine("]");
 }
 
-int[] Inverse(int[] arr)
+void Inverse(int[] arr)
 {
     for (int i = 0; i < arr.Length; i++)
     {
         arr[i] *= -1;
     }
-    return arr;
+    
 }
 
 int[] array = CreateArrayRndInt(4, -9, 9);
 PrintArray(array);
-
-PrintArray(Inverse(array));
+Inverse(array);
+PrintArray(array);

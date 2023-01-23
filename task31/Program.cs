@@ -27,30 +27,49 @@ void PrintArray(int[] arr)
     Console.WriteLine("]");
 }
 
-int GetSumPositiveElem(int[] arr)
+// int GetSumPositiveElem(int[] arr)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if(arr[i] > 0) sum +=arr[i];
+//     }
+//     return sum;
+// }
+
+// int GetSumNegativeElem(int[] arr)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if(arr[i] < 0) sum +=arr[i];
+//     }
+//     return sum;
+// }
+
+int[] GetSumPositiveNegativeElem(int[] arr)
 {
-    int sum = 0;
+    int sumNeg = 0;
+    int sumPos = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if(arr[i] > 0) sum +=arr[i];
+        if(arr[i] > 0) sumPos +=arr[i];
+        else if (arr[i] < 0) sumNeg +=arr[i];
     }
-    return sum;
+    return new[]{sumPos, sumNeg};
 }
 
-int GetSumNegativeElem(int[] arr)
-{
-    int sum = 0;
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if(arr[i] < 0) sum +=arr[i];
-    }
-    return sum;
-}
 
 
 int[] array = CreateArrayRndInt(12, -9, 9);
 PrintArray(array);
-int sumPozitive = GetSumPositiveElem(array);
-int sumNegative = GetSumNegativeElem(array);
-Console.WriteLine($"Сумма положительных элементов = {sumPozitive}");
-Console.WriteLine($"Сумма отрицательных элементов = {sumNegative}");
+// int sumPozitive = GetSumPositiveElem(array);
+// int sumNegative = GetSumNegativeElem(array);
+
+int[] sumPositiveNegative = GetSumPositiveNegativeElem(array);
+
+Console.WriteLine($"Сумма положительных элементов = {sumPositiveNegative[0]}");
+Console.WriteLine($"Сумма отрицательных элементов = {sumPositiveNegative[1]}");
+
+// Console.WriteLine($"Сумма положительных элементов = {sumPozitive}");
+// Console.WriteLine($"Сумма отрицательных элементов = {sumNegative}");

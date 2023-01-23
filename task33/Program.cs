@@ -25,7 +25,7 @@ void PrintArray(int[] arr)
     Console.WriteLine("]");
 }
 
-bool GetNumInArray(int[] arr, int num)
+bool IsExist(int[] arr, int num)
 {
     for (int i = 0; i < arr.Length; i++)
     {
@@ -38,7 +38,7 @@ int[] array = CreateArrayRndInt(12, -9, 9);
 PrintArray(array);
 Console.Write("Введите число, которое хотите найти в массиве: ");
 int number = Convert.ToInt32(Console.ReadLine());
-bool getNumInArray = GetNumInArray(array, number);
+bool getNumInArray = IsExist(array, number);
 if (getNumInArray)
 {
     Console.Write($"Число {number} есть в массиве - ");

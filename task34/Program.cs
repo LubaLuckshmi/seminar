@@ -26,12 +26,12 @@ void PrintArray(int[] arr)
     Console.WriteLine("]");
 }
 
-int CountElements(int[]arr)
+int CountElements(int[] arr)
 {
     int count = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if(arr[i] %2 == 0) count ++;
+        if (arr[i] % 2 == 0) count++;
     }
     return count;
 }

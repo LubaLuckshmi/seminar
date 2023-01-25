@@ -2,6 +2,12 @@
 // которая будет создавать копию заданного массива 
 // с помощью поэлементного копирования.
 
+int[] arrayOrigin = CreateArrayRndInt(10, -3, 5);
+PrintArray(arrayOrigin);
+
+int[] arrayCopy = CopyArray(arrayOrigin);
+PrintArray(arrayCopy);
+
 int[] CreateArrayRndInt(int size, int min, int max)
 {
     int[] arr = new int[size];
@@ -22,4 +28,14 @@ void PrintArray(int[] arr)
         else Console.Write(arr[i]);
     }
     Console.WriteLine("]");
+}
+
+int[] CopyArray(int[] arr)
+{
+    int[] result = new int[arr.Length];
+    for (int i = 0; i < arr.Length; i++)
+    {
+        result[i] = arr[i];
+    }
+    return result;
 }

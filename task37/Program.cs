@@ -4,7 +4,6 @@
 // [1 2 3 4 5] -> 5 8 3
 // [6 7 3 6] -> 36 21
 
-int[] CreateArray
 
 int[] CreateArrayRndInt(int size, int min, int max)
 {

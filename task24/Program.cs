@@ -5,6 +5,7 @@
 // 4 -> 10
 // 8 -> 36
 
+
 Console.WriteLine("Введите целое число");
 int number = Convert.ToInt32(Console.ReadLine());
 // int number1 = int.Parse(Console.ReadLine());
@@ -18,8 +19,8 @@ int SumNumbers(int num)
     for (int i = 1; i <= num; i++)
     {
         // sum = sum +1
-        sum+=i;
+        sum += i;
     }
-return sum;
+    return sum;
 
 }

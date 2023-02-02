@@ -54,8 +54,8 @@ int[,] MyltiplyMatrix(int[,] matrix1, int[,] matrix2)
 
 int matrixRows1 = 1;
 int matrixColumns1 = 2;
-int matrixRows2 = 9;
-int matrixColumns2 = 1;
+int matrixRows2 = 2;
+int matrixColumns2 = 3;
 
 int[,] array2Dfirst = CreateMatrixRndInt(matrixRows1, matrixColumns1, 0, 9);
 int[,] array2Dsecond = CreateMatrixRndInt(matrixRows2, matrixColumns2, 0, 9);
